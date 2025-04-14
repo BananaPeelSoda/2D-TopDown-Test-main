@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
+    
     public class TopDownCharacterController : MonoBehaviour
     {
         public float speed;
