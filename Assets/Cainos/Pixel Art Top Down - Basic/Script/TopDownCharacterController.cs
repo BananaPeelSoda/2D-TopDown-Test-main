@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
-    
+
     public class TopDownCharacterController : MonoBehaviour
     {
         public float speed;
@@ -84,9 +84,14 @@ namespace Cainos.PixelArtTopDown_Basic
             if (currentHealth <= 0)
             {
                 Die();
+                PlayerDied();
             }
         }
-
+        private void PlayerDied()
+        {
+            LevelManager.instance.GameOver();
+            gameObject.SetActive(false);
+        }
         // Method to handle player death
         private void Die()
         {
@@ -97,24 +102,8 @@ namespace Cainos.PixelArtTopDown_Basic
             GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero; // Stop movement
 
             // Example: Restart the level after a delay
-            StartCoroutine(RestartLevel());
         }
-
-        // Coroutine to restart the level
-        private IEnumerator RestartLevel()
-        {
-            yield return new WaitForSeconds(1f); // Wait for 2 seconds
-            UnityEngine.SceneManagement.SceneManager.LoadScene(
-                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-
-            if (currentHealth <= 0) { GameOverPanel.SetActive(true); }
-                if (currentHealth <= 0)
-            {
-                yield return new WaitForSeconds(5f);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
-            
-        }
-
     }
 }
+
+
