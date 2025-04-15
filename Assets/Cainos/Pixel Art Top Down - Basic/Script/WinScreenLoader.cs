@@ -1,24 +1,28 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class WinScreenTrigger : MonoBehaviour
+public class WinScreenManager : MonoBehaviour
 {
-    public int totalItems = 10; // Total number of items to collect
-    private int collectedItems = 0; // Number of items collected
+    // Reference to the CanvasGroup of the win screen
+    public CanvasGroup winScreen;
 
-    void Update()
+    // Method to show the win screen
+    public void ShowWinScreen()
     {
-        // Check if the player has collected everything
-        if (collectedItems >= totalItems)
-        {
-            // Load the win screen scene
-            SceneManager.LoadScene("WinScreen");
-        }
+        // Set the alpha of the CanvasGroup to 1 to make it visible
+        winScreen.alpha = 1;
+        // Optionally, you can also enable the Canvas if it was disabled
+        winScreen.gameObject.SetActive(true);
     }
 
-    // Example method to increment collected items
-    public void OnItemCollected()
+    // Example method to check for win conditions
+    public void CheckWinConditions()
     {
-        collectedItems++;
+        // Example condition: Player reaches a score of 100
+        int playerScore = 4; // Replace with actual score logic
+        if (playerScore >= 4)
+        {
+            ShowWinScreen();
+        }
     }
 }
