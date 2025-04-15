@@ -1,28 +1,34 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class WinScreenManager : MonoBehaviour
+// Show the buildIndex for the current script.
+//
+// The Build Settings window shows 5 added Scenes.  These have buildIndex values from
+// 0 to 4. Each Scene has a version of this script applied.
+//
+// In the Project, create 5 Scenes called scene1, scene2, scene3, scene4 and scene5.
+// In each Scene add an empty GameObject and attach this script to it.
+//
+// Each Scene randomly switches to a different Scene when the button is clicked.
+
+public class ExampleScript : MonoBehaviour
 {
-    // Reference to the CanvasGroup of the win screen
-    public CanvasGroup winScreen;
+    Scene scene;
 
-    // Method to show the win screen
-    public void ShowWinScreen()
+    void Start()
     {
-        // Set the alpha of the CanvasGroup to 1 to make it visible
-        winScreen.alpha = 1;
-        // Optionally, you can also enable the Canvas if it was disabled
-        winScreen.gameObject.SetActive(true);
+        scene = SceneManager.GetActiveScene();
+        Debug.Log("Active Scene name is: " + scene.name + "\nActive Scene index: " + scene.buildIndex);
     }
 
-    // Example method to check for win conditions
-    public void CheckWinConditions()
+    void OnGUI()
     {
-        // Example condition: Player reaches a score of 100
-        int playerScore = 4; // Replace with actual score logic
-        if (playerScore >= 4)
+        GUI.skin.button.fontSize = 20;
+
+        if (GUI.Button(new Rect(10, 80, 180, 60), "Change from scene " + scene.buildIndex))
         {
-            ShowWinScreen();
+            int nextSceneIndex = Random.Range(0, 4);
+            SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Single);
         }
     }
 }

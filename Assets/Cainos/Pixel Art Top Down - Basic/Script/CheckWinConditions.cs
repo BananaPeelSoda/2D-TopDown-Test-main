@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,5 +9,13 @@ public class PlayerController : MonoBehaviour
     {
         // Example: Check for win conditions every frame
         winScreenManager.CheckWinConditions();
+    }
+}
+
+public class WinScreenManager
+{
+    internal void CheckWinConditions()
+    {
+        throw new NotImplementedException();
     }
 }

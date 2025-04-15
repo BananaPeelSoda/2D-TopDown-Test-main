@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
@@ -15,6 +16,7 @@ namespace Cainos.PixelArtTopDown_Basic
         private bool isDead = false; // To prevent multiple death triggers
 
         public LayerMask groundLayer; // Layer the player must be on to survive
+        [SerializeField] private GameObject destroyeffect, thunderFlashEffect, GameOverPanel, EnemyBody;
 
         private void Start()
         {
@@ -101,10 +103,18 @@ namespace Cainos.PixelArtTopDown_Basic
         // Coroutine to restart the level
         private IEnumerator RestartLevel()
         {
-            yield return new WaitForSeconds(2f); // Wait for 2 seconds
+            yield return new WaitForSeconds(1f); // Wait for 2 seconds
             UnityEngine.SceneManagement.SceneManager.LoadScene(
-                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
-            );
+                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+
+            if (currentHealth <= 0) { GameOverPanel.SetActive(true); }
+                if (currentHealth <= 0)
+            {
+                yield return new WaitForSeconds(5f);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            
         }
+
     }
 }
