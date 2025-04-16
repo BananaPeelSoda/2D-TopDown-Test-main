@@ -20,4 +20,12 @@ public class LevelManager : MonoBehaviour
             _ui.ToggleDeathPanel();
         }
     }
+    public void YouWin()
+    {
+        UIManager1 _ui = GetComponent<UIManager1>();
+        if (_ui != null)
+        {
+            _ui.ToggleWinPanel();
+        }
+    }
 }

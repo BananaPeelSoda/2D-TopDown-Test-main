@@ -11348,7 +11348,7 @@ GameObject:
   - component: {fileID: 449807984}
   m_Layer: 18
   m_Name: Hole
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11876,7 +11876,7 @@ GameObject:
   - component: {fileID: 645050104}
   m_Layer: 18
   m_Name: Hole (1)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12661,7 +12661,7 @@ GameObject:
   - component: {fileID: 723703170}
   m_Layer: 18
   m_Name: Hole (2)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14120,7 +14120,7 @@ GameObject:
   - component: {fileID: 865745450}
   m_Layer: 18
   m_Name: Hole (3)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14279,6 +14279,7 @@ GameObject:
   - component: {fileID: 874618031}
   - component: {fileID: 874618033}
   - component: {fileID: 874618032}
+  - component: {fileID: 874618034}
   m_Layer: 5
   m_Name: WinPanel
   m_TagString: Untagged
@@ -14346,6 +14347,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874618030}
   m_CullTransparentMesh: 1
+--- !u!114 &874618034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874618030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442245efe1e8355499645dec17560fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &913681807
 GameObject:
   m_ObjectHideFlags: 0
@@ -14605,7 +14618,7 @@ GameObject:
   - component: {fileID: 963607410}
   m_Layer: 18
   m_Name: Hole
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21650,7 +21663,7 @@ GameObject:
   - component: {fileID: 1281271533}
   m_Layer: 18
   m_Name: Hole
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24258,7 +24271,7 @@ GameObject:
   - component: {fileID: 1647059838}
   m_Layer: 18
   m_Name: Hole
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26936,6 +26949,7 @@ GameObject:
   - component: {fileID: 2095487006}
   - component: {fileID: 2095487005}
   - component: {fileID: 2095487008}
+  - component: {fileID: 2095487009}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -26995,6 +27009,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c01e6e842590749b9666f4630fafd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2095487009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095487004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1ce347676106a49a1e591c24e95bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinPanel: {fileID: 0}
+  totalToCollect: 2
 --- !u!1 &2131597717
 GameObject:
   m_ObjectHideFlags: 0
