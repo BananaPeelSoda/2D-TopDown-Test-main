@@ -5,6 +5,10 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance;
 
     public int score;
+    public int maxScore = 4;
+
+    public GameObject winScreen;
+
 
     void Awake()
     {
@@ -21,5 +25,9 @@ public class PlayerManager : MonoBehaviour
     public void IncrementScore(int amount)
     {
         score += amount;
+        if (score >= maxScore)
+        {
+            winScreen.SetActive(true);
+        }
     }
 }

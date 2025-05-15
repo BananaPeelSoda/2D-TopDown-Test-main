@@ -5673,11 +5673,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 358955836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
+  damage: 100
 --- !u!1 &363078142
 GameObject:
   m_ObjectHideFlags: 0
@@ -10918,11 +10917,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 381705402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
+  damage: 100
 --- !u!1 &384121677
 GameObject:
   m_ObjectHideFlags: 0
@@ -11345,7 +11343,7 @@ GameObject:
   - component: {fileID: 449807987}
   - component: {fileID: 449807986}
   - component: {fileID: 449807985}
-  - component: {fileID: 449807984}
+  - component: {fileID: 449807988}
   m_Layer: 18
   m_Name: Hole
   m_TagString: Trap
@@ -11353,20 +11351,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &449807984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449807983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
 --- !u!68 &449807985
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -11496,6 +11480,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.225}
+--- !u!114 &449807988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449807983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &482644456
 GameObject:
   m_ObjectHideFlags: 0
@@ -11873,7 +11870,7 @@ GameObject:
   - component: {fileID: 645050107}
   - component: {fileID: 645050106}
   - component: {fileID: 645050105}
-  - component: {fileID: 645050104}
+  - component: {fileID: 645050108}
   m_Layer: 18
   m_Name: Hole (1)
   m_TagString: Trap
@@ -11881,20 +11878,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &645050104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645050103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
 --- !u!68 &645050105
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -12024,6 +12007,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.225}
+--- !u!114 &645050108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645050103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &686180568
 GameObject:
   m_ObjectHideFlags: 0
@@ -12658,7 +12654,7 @@ GameObject:
   - component: {fileID: 723703173}
   - component: {fileID: 723703172}
   - component: {fileID: 723703171}
-  - component: {fileID: 723703170}
+  - component: {fileID: 723703174}
   m_Layer: 18
   m_Name: Hole (2)
   m_TagString: Trap
@@ -12666,20 +12662,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &723703170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723703169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
 --- !u!68 &723703171
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -12809,6 +12791,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.497}
+--- !u!114 &723703174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723703169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &743568858
 GameObject:
   m_ObjectHideFlags: 0
@@ -14117,7 +14112,7 @@ GameObject:
   - component: {fileID: 865745453}
   - component: {fileID: 865745452}
   - component: {fileID: 865745451}
-  - component: {fileID: 865745450}
+  - component: {fileID: 865745454}
   m_Layer: 18
   m_Name: Hole (3)
   m_TagString: Trap
@@ -14125,20 +14120,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &865745450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865745449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
 --- !u!68 &865745451
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -14268,6 +14249,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.225}
+--- !u!114 &865745454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865745449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &874618030
 GameObject:
   m_ObjectHideFlags: 0
@@ -14615,7 +14609,7 @@ GameObject:
   - component: {fileID: 963607413}
   - component: {fileID: 963607412}
   - component: {fileID: 963607411}
-  - component: {fileID: 963607410}
+  - component: {fileID: 963607414}
   m_Layer: 18
   m_Name: Hole
   m_TagString: Trap
@@ -14623,20 +14617,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &963607410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963607409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
 --- !u!68 &963607411
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -14766,6 +14746,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.225}
+--- !u!114 &963607414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963607409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &1037786241
 GameObject:
   m_ObjectHideFlags: 0
@@ -15024,11 +15017,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048074219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
+  damage: 100
 --- !u!1 &1177272031
 GameObject:
   m_ObjectHideFlags: 0
@@ -21660,7 +21652,7 @@ GameObject:
   - component: {fileID: 1281271536}
   - component: {fileID: 1281271535}
   - component: {fileID: 1281271534}
-  - component: {fileID: 1281271533}
+  - component: {fileID: 1281271537}
   m_Layer: 18
   m_Name: Hole
   m_TagString: Trap
@@ -21668,20 +21660,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1281271533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281271532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
 --- !u!68 &1281271534
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -21811,6 +21789,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.225}
+--- !u!114 &1281271537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281271532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &1283197211
 GameObject:
   m_ObjectHideFlags: 0
@@ -23930,11 +23921,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1594975704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
+  damage: 100
 --- !u!1 &1597584789
 GameObject:
   m_ObjectHideFlags: 0
@@ -24223,6 +24213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  maxScore: 4
+  winScreen: {fileID: 874618030}
 --- !u!114 &1622224644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24295,7 +24287,7 @@ GameObject:
   - component: {fileID: 1647059841}
   - component: {fileID: 1647059840}
   - component: {fileID: 1647059839}
-  - component: {fileID: 1647059838}
+  - component: {fileID: 1647059842}
   m_Layer: 18
   m_Name: Hole
   m_TagString: Trap
@@ -24303,20 +24295,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1647059838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647059837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d459c328bd694898a39e8ee677858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: fall
-  sortingLayer: fall
 --- !u!68 &1647059839
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -24446,6 +24424,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.225}
+--- !u!114 &1647059842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647059837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d85fb483ad45624aa6f57e33182253b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &1647753513
 GameObject:
   m_ObjectHideFlags: 0
